@@ -24,3 +24,12 @@ n = 6:
 55555
 666666
 """
+
+def triangular_sequence(n):
+    if n == 0:
+        return n
+    triangular_sequence(n - 1)
+    return print(str(n) * n)
+
+# n = int(input("Введите число членов последовательности:"))
+# print(triangular_sequence(n))

@@ -20,3 +20,27 @@ school_data = {
     '2a': 13,
     '2b': 30
 }
+
+
+def incr_students(school_data, class_name):
+    key_value = school_data.get(class_name) + 1
+    school_data.update({class_name: key_value})
+
+
+def decr_students(school_data, class_name):
+    key_value = school_data.get(class_name) - 1
+    if key_value >= 0:
+        school_data.update({class_name: key_value})
+
+
+def add_class(school_data, class_name):
+    school_data[class_name] = 0
+
+
+def remove_class(school_data, class_name):
+    school_data.pop(class_name)
+
+
+def calc_students(school_data):
+    number_of_students = sum(school_data.values())
+    return number_of_students
