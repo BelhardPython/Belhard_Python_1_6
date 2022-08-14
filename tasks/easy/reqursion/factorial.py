@@ -4,11 +4,12 @@
 5! = 1 * 2 * 3 * 4 * 5 = 125
 """
 
+
 def factorial(n):
     if (n <= 1):
         result = 1
     else:
-        result = n * factorial(n-1)
+        result = n * factorial(n - 1)
     return result
 
 # n = int(input("Введите число:"))

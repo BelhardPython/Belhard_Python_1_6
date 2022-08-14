@@ -13,6 +13,7 @@ next(fibonacci_gen) -> 5
 next(fibonacci_gen) -> 8
 """
 
+
 def fibonacci():
     fib_1 = 0
     fib_2 = 1

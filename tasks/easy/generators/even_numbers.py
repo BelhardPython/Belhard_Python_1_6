@@ -10,6 +10,7 @@ next(even_gen) -> 4
 next(even_gen) -> 6
 """
 
+
 def get_even_number():
     for i in range(20):
         yield 2 * i + 2
