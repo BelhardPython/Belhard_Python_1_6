@@ -25,11 +25,11 @@ n = 6:
 666666
 """
 
-def triangular_sequence(n):
-    if n == 0:
-        return n
-    triangular_sequence(n - 1)
-    return print(str(n) * n)
+def triangular_sequence(n: int, current=1, sequence=""):
+    if current <= n:
+        return triangular_sequence(n, current + 1, sequence + str(current)*current + '\n')
+    else:
+        return sequence
 
-# n = int(input("Введите число членов последовательности:"))
-# print(triangular_sequence(n))
+
+print(triangular_sequence(6))
