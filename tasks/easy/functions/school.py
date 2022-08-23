@@ -20,3 +20,54 @@ school_data = {
     '2a': 13,
     '2b': 30
 }
+
+
+def incr_students(collection):
+    res = {}
+    for value in collection.values():
+        for key in collection.keys():
+            value = collection.get(key)
+            res[key] = value + 1
+    return res
+
+
+print(incr_students(school_data))
+
+
+def decr_students(collection):
+    res = {}
+    for value in collection.values():
+        for key in collection.keys():
+            value = collection.get(key)
+            if value == 0:
+                res[key] = 0
+            else:
+                res[key] = value - 1
+    return res
+
+
+print(decr_students(school_data))
+
+
+def add_class(collection, str_1):
+    res = collection.update({str_1: 0})
+    return res
+
+
+print(add_class(school_data, "5A"))
+
+
+def calc_students(collection):
+    res = sum(collection.values())
+    return res
+
+
+print(calc_students(school_data))
+
+
+def remove_class(collection, str_3):
+    res = collection.pop(str_3)
+    return res
+
+
+print(add_class(school_data, "1a"))
